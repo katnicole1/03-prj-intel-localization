@@ -1,0 +1,429 @@
+/* =========================
+   INTEL SUSTAINABILITY PAGE
+   ========================= */
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7f9;
+  color: #1f2933;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   HERO / HEADER
+   ========================= */
+
+header {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    #0068b5 0%,
+    #0071c5 50%,
+    #00a3e0 100%
+  );
+
+  color: white;
+  padding: 70px 25px;
+}
+
+header div {
+  max-width: 850px;
+}
+
+header img {
+  width: 150px;
+  max-width: 40%;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: 22px;
+  letter-spacing: -1px;
+}
+
+header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #eaf7ff;
+}
+
+
+/* =========================
+   TIMELINE
+   ========================= */
+
+.timeline {
+  display: flex;
+  gap: 25px;
+
+  overflow-x: auto;
+
+  padding: 70px 8% 45px;
+
+  /* LevelUp: Scroll Snap */
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: thin;
+  scrollbar-color: #0071c5 #dbe7ee;
+}
+
+
+/* Scrollbar */
+
+.timeline::-webkit-scrollbar {
+  height: 10px;
+}
+
+.timeline::-webkit-scrollbar-track {
+  background: #dbe7ee;
+  border-radius: 10px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+  background: #0071c5;
+  border-radius: 10px;
+}
+
+
+/* =========================
+   TIMELINE CARDS
+   ========================= */
+
+.timeline > div {
+  flex: 0 0 320px;
+
+  background: white;
+
+  padding: 28px;
+
+  border-radius: 18px;
+
+  border-top: 6px solid #00a3e0;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  position: relative;
+
+  scroll-snap-align: center;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* Card hover */
+
+.timeline > div:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 18px 35px rgba(0, 104, 181, 0.22);
+
+  border-top-color: #0068b5;
+}
+
+
+/* =========================
+   YEAR + TITLE
+   ========================= */
+
+.timeline h2 {
+  color: #0068b5;
+  font-size: 2.4rem;
+  margin-bottom: 4px;
+}
+
+.timeline h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   TIMELINE IMAGES
+   ========================= */
+
+.timeline-image {
+  width: 100%;
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  margin-bottom: 18px;
+
+  display: block;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+
+/* Image effect when hovering */
+
+.timeline > div:hover .timeline-image {
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.timeline > div p {
+  color: #5b6570;
+
+  font-size: 0.98rem;
+
+  line-height: 1.7;
+
+  opacity: 0.75;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  transform: translateY(5px);
+}
+
+
+/* Reveal description on hover */
+
+.timeline > div:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================
+   TIMELINE DOT
+   ========================= */
+
+.timeline > div::before {
+  content: "";
+
+  width: 15px;
+  height: 15px;
+
+  background: #00a3e0;
+
+  border: 4px solid white;
+
+  box-shadow: 0 0 0 2px #00a3e0;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  top: -13px;
+  left: 28px;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   SCROLL MESSAGE
+   ========================= */
+
+body > p {
+  text-align: center;
+
+  font-weight: bold;
+
+  color: #0068b5;
+
+  padding: 15px 20px 50px;
+
+  font-size: 0.95rem;
+}
+
+
+/* =========================
+   PROJECT 3 BOOTSTRAP SECTIONS
+   ========================= */
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Three-column section */
+.container .row {
+  width: 100%;
+}
+
+/* Make Project 3 headings match Intel theme */
+.container h2 {
+  color: #0068b5;
+}
+
+/* Learn More buttons */
+.btn-primary {
+  background-color: #0068b5;
+  border-color: #0068b5;
+}
+
+.btn-primary:hover {
+  background-color: #004f8a;
+  border-color: #004f8a;
+}
+
+
+/* =========================
+   SUBSCRIPTION FORM
+   ========================= */
+
+.form-control {
+  width: 100%;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form .form-text {
+  margin-top: 6px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  background: white;
+  color: #1f2933;
+}
+
+footer a {
+  color: #0068b5;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   RTL SUPPORT
+   ========================= */
+
+[dir="rtl"] .container {
+  text-align: right;
+}
+
+/* Move timeline dot to RTL side */
+[dir="rtl"] .timeline > div::before {
+  left: auto;
+  right: 28px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 700px) {
+
+  header {
+    min-height: 360px;
+    padding: 55px 22px;
+  }
+
+  header img {
+    width: 115px;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+
+  /* Turn horizontal timeline into
+     vertical timeline on phones */
+
+  .timeline {
+    flex-direction: column;
+
+    overflow-x: visible;
+
+    padding: 45px 20px;
+
+    gap: 25px;
+
+    scroll-snap-type: none;
+  }
+
+
+  .timeline > div {
+    flex: none;
+
+    width: 100%;
+
+    padding: 25px;
+  }
+
+
+  .timeline > div:hover {
+    transform: translateY(-5px);
+  }
+
+
+  .timeline h2 {
+    font-size: 2rem;
+  }
+
+
+  .timeline-image {
+    height: 190px;
+  }
+
+
+  /* Keep descriptions readable
+     on touch devices */
+
+  .timeline > div p {
+    opacity: 1;
+    transform: none;
+  }
+
+
+  body > p {
+    display: none;
+  }
+}
